@@ -9,7 +9,11 @@ class FileController extends Controller
 {
     public function index()
     {
-        return "index files";
+        $files = [
+            (object)['name' => 'file 1'],
+            (object)['name' => 'file 2'],
+        ];
+        return view('files.index', compact('files'));
     }
 
     public function show($id){
