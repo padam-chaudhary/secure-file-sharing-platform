@@ -1,3 +1,3 @@
 <div>
-  <x-alert type="success" :message= "$message"/>
+  <x-alert type="success" :message ="$message"/>
 </div>
