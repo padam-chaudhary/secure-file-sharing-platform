@@ -8,10 +8,16 @@ use Illuminate\Database\Eloquent\Model;
 class File extends Model
 {
     use HasFactory;
-    protected $file = [
+    protected $fillable = [
         'name',
         'path',
         'user_id',
+        'share_token',
+        'share_token_expires_at',
+    ];
+
+    protected $casts = [
+        'share_token_expires_at' => 'datetime',
     ];
 
     public function user(){
